@@ -1,1 +1,1 @@
-# ejFundInf
+# Ejercicios de fundamentos de informática
