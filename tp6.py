@@ -61,25 +61,29 @@ def ejercicio5(a):
 
 
 def ejercicio6(a, b):
-    # TODO: no se me ocurre todavía cómo plantearlo bajo las restricciones que impone el enunciado
-
-    # Entrada
+    # En las funciones, las entradas teóricamente serían los argumentos
 
     # Proceso
-
     # Salida
-    return
+    if a > b:
+        return 1
+    elif b > a:
+        return -1
+    else:
+        return 0
 
 
 def ejercicio7(a, b):
-    # TODO: Mucho texto en el enunciado
-
-    # Entrada
+    # En las funciones, las entradas teóricamente serían los argumentos
 
     # Proceso
-
     # Salida
-    return
+    if a == b:
+        return a
+    elif a > b:
+        return ejercicio7(a - b, b)
+    else:
+        return ejercicio7(b, a)
 
 
 def ejercicio8(a, b):
@@ -104,27 +108,38 @@ def ejercicio9(a, b):
     return
 
 
-def ejercicio10(a, b):
-    # TODO: Mucho texto en el enunciado
-
-    # Entrada
+def ejercicio10(a: int, b):
+    # En las funciones, las entradas teóricamente serían los argumentos
 
     # Proceso
+    c = 0
+    while a > 0:
+        if a % 10 == b:
+            return c
+        a = a // 10
+        c = c + 1
+    return -1
 
-    # Salida
-    return
 
-
-def ejercicio11(a, b):
-    # TODO: Mucho texto en el enunciado
-
-    # Entrada
+def ejercicio11(a):
+    # En las funciones, las entradas teóricamente serían los argumentos
 
     # Proceso
-
-    # Salida
-    return
+    c = 0
+    a2 = a
+    while a2 > 0:
+        a2 //= 10
+        c += 1
+    if c % 2 == 0:
+        return -1
+    else:
+        p = 0
+        while a > 0:
+            if (c // 2) == p:
+                return a % 10
+            a = a // 10
+            p = p + 1
 
 
 if __name__ == '__main__':
-    print(ejercicio6(4, 2))
+    print(ejercicio11(1234567))
